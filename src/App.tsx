@@ -3,6 +3,7 @@ import Pokedex from "./layouts/Pokedex"
 import { useEffect, useState } from "react"
 import { APIPokemon } from "./Api"
 import { PokemonType } from "./types"
+import Footer from "./layouts/Footer"
 
 export default function App() {
   const [pokemons, setPokemons] = useState<PokemonType[]>([])
@@ -37,6 +38,7 @@ export default function App() {
     <>
       <Hero />
       <Pokedex data={pokemons} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+      <Footer />
     </>
   )
 }
