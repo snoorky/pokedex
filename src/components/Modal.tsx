@@ -6,9 +6,9 @@ export default function PokemonModal({ toggleModal, pokemon }: PokemonModalProps
     return (
         <div className="fixed inset-0 filter backdrop-blur-sm bg-[#00000063] w-screen h-screen flex items-center justify-center">
             <div className="relative rounded-4xl w-lg h-[600px] flex flex-col items-center" style={{ background: `radial-gradient(80% 80% at 50% bottom, rgb(255, 102, 51), rgba(6, 14, 32, 0.8))` }}>
-                <div className="absolute inset-0 bg-no-repeat rounded-4xl" style={{ backgroundImage: "url(/balls.svg)" }}></div>
+                <div className="absolute inset-0 bg-no-repeat rounded-4xl" style={{ backgroundImage: "url(./balls.svg)" }}></div>
                 <button className="absolute z-1 top-5 right-5 cursor-pointer" onClick={toggleModal}>
-                    <img className="h-6" src="/close.svg" alt="Close modal" />
+                    <img className="h-6" src="./close.svg" alt="Close modal" />
                 </button>
                 <div className="relative -mt-16">
                     <img className="filter saturate-100 h-64" src={pokemon.image} alt={pokemon.name} />

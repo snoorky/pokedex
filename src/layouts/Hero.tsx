@@ -69,15 +69,15 @@ export default function Hero() {
 
   return (
     <main className="relative w-screen bg-linear-to-b from-primary to-secondary flex flex-col items-center px-18 pt-10 pb-32">
-      <div className="absolute inset-0 bg-no-repeat z-0" style={{ backgroundImage: "url(/balls.svg)" }}></div>
-      <img src="/logo.svg" alt="Logotipo" />
+      <div className="absolute inset-0 bg-no-repeat z-0" style={{ backgroundImage: "url(./balls.svg)" }}></div>
+      <img src="./logo.svg" alt="Logotipo" />
       <div className="relative flex items-center">
         <div className="text-white space-y-4">
           <h1 className="text-7xl font-bold capitalize">{pokemon.name}</h1>
           <div className="flex space-x-2">
             {pokemon.types.map((type: any, index: number) => (
               <span key={index} className="flex items-center rounded-xl p-2 font-semibold" style={{ background: `${getTypeColor(type)}` }}>
-                <img key={index} className="h-7" src={`/${type}.svg`} alt={type} loading="lazy" />
+                <img key={index} className="h-7" src={`./${type}.svg`} alt={type} loading="lazy" />
               </span>
             ))}
           </div>

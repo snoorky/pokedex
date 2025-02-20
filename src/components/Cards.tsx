@@ -4,7 +4,7 @@ import { StatsBase, StatsElements } from "./Stats"
 export default function Cards({ info }: any) {
     return (
         <div className="relative border border-gray-700 rounded-4xl" style={{ background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.1), ${getTypeColor(info.types[0])})` }}>
-            <div className="absolute inset-0 bg-no-repeat z-0" style={{ backgroundImage: "url(/balls.svg" }}></div>
+            <div className="absolute inset-0 bg-no-repeat z-0" style={{ backgroundImage: "url(./balls.svg" }}></div>
             <div className="flex justify-center -mt-20">
                 <img className="w-64 filter saturate-200" loading="lazy" src={info.image} alt={info.name} />
             </div>
