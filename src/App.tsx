@@ -8,7 +8,19 @@ import Footer from "./layouts/Footer"
 export default function App() {
   const [pokemons, setPokemons] = useState<PokemonType[]>([])
   const [currentPage, setCurrentPage] = useState(0)
-  const limit = 9
+  const [limit, setLimit] = useState(9)
+
+  const updateLimit = () => {
+    if (window.innerWidth >= 1024) { setLimit(9) }
+    else if (window.innerWidth >= 768) { setLimit(6) }
+    else { setLimit(3) }
+  }
+
+  useEffect(() => {
+    updateLimit()
+    window.addEventListener("resize", updateLimit)
+    return () => window.removeEventListener("resize", updateLimit)
+  }, [])
 
   useEffect(() => {
     async function fetchPokemons() {
@@ -32,7 +44,7 @@ export default function App() {
     }
 
     fetchPokemons()
-  }, [currentPage])
+  }, [currentPage, limit])
 
   return (
     <>

@@ -68,23 +68,23 @@ export default function Hero() {
   if (!pokemon) return <Loading />
 
   return (
-    <main className="relative w-screen bg-linear-to-b from-primary to-secondary flex flex-col items-center px-18 pt-10 pb-32">
+    <main className="relative bg-linear-to-b from-primary to-secondary min-w-screen flex flex-col items-center pt-10 px-9 md:px-12 lg:px-18 pb-16 md:pb-24 lg:pb-32">
       <div className="absolute inset-0 bg-no-repeat z-0" style={{ backgroundImage: "url(./balls.svg)" }}></div>
       <img src="./logo.svg" alt="Logotipo" />
-      <div className="relative flex items-center">
-        <div className="text-white space-y-4">
-          <h1 className="text-7xl font-bold capitalize">{pokemon.name}</h1>
+      <div className="relative flex flex-col lg:flex-row mt-8 md:mt-16 items-center">
+        <div className="text-white space-y-4 flex flex-col items-center lg:items-start">
+          <h1 className="text-3xl md:text-5xl xl:text-7xl font-bold capitalize">{pokemon.name}</h1>
           <div className="flex space-x-2">
             {pokemon.types.map((type: any, index: number) => (
-              <span key={index} className="flex items-center rounded-xl p-2 font-semibold" style={{ background: `${getTypeColor(type)}` }}>
+              <span key={index} className="flex items-center rounded-xl font-semibold p-2" style={{ background: `${getTypeColor(type)}` }}>
                 <img key={index} className="h-7" src={`./${type}.svg`} alt={type} loading="lazy" />
               </span>
             ))}
           </div>
-          <p className="font-semibold">{pokemon.description}</p>
-          <button className="bg-[rgba(0,0,0,0.8)] py-3 px-6 rounded-xl cursor-pointer" onClick={toggleModal}>Mais detalhes</button>
+          <p className="md:text-xl md:text-center lg:text-start font-semibold">{pokemon.description}</p>
+          <button className="bg-[rgba(0,0,0,0.8)] rounded-xl cursor-pointer py-2 px-4" onClick={toggleModal}>Mais detalhes</button>
         </div>
-        <img className="h-160" src={pokemon.image} alt={pokemon.name} loading="lazy" />
+        <img className="md:w-xl" src={pokemon.image} alt={pokemon.name} loading="lazy" />
       </div>
       <Waves />
       {isModalOpen && <PokemonModal toggleModal={toggleModal} pokemon={pokemon} />}

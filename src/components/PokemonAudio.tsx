@@ -13,7 +13,7 @@ export default function PokemonAudio({ src }: { src: string }) {
     }
 
     return (
-        <button className="flex items-center justify-center p-2 rounded-full bg-[#ffffff54]" onClick={toggleAudio}>
+        <button className="flex items-center justify-center rounded-full bg-[#ffffff54] p-2" onClick={toggleAudio}>
             {isPlaying ? <Pause /> : <Play />}
         </button>
     );
