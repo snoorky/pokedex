@@ -2,7 +2,7 @@
 
 This project is a fully functional **Pokédex** that fetches data from the [PokeAPI](https://pokeapi.co/), displaying all Pokémon in a paginated gallery, and features a **random Pokémon** section with detailed Pokédex stats.
 
-<img src="/screenshot.png" alt="Application screenshot" />
+<img src="/public/screenshot.png" alt="Application screenshot" />
 
 ## 📚 Technologies
 
