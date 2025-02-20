@@ -81,7 +81,7 @@ export default function Hero() {
               </span>
             ))}
           </div>
-          <p className="md:text-xl md:text-center lg:text-start font-semibold">{pokemon.description}</p>
+          <p className="md:text-xl text-center lg:text-start font-semibold">{pokemon.description}</p>
           <button className="bg-[rgba(0,0,0,0.8)] rounded-xl cursor-pointer py-2 px-4" onClick={toggleModal}>Mais detalhes</button>
         </div>
         <img className="md:w-xl" src={pokemon.image} alt={pokemon.name} loading="lazy" />

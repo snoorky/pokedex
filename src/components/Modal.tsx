@@ -38,7 +38,7 @@ export default function PokemonModal({ toggleModal, pokemon }: PokemonModalProps
                     </div>
                     <div className="flex items-center w-full space-x-2 mb-8">
                         <p className="font-bold">Fraquezas:</p>
-                        <div className="flex space-x-2">
+                        <div className="flex space-x-2 overflow-scroll">
                             {pokemon.weakness.map((type: any, index: number) => (
                                 <StatsElements key={index} styled="h-6 lg:h-8 p-1.5 rounded-full" element={type} />
                             ))}
