@@ -73,7 +73,7 @@ export default function Hero() {
       <img src="./logo.svg" alt="Logotipo" />
       <div className="relative flex flex-col lg:flex-row mt-8 md:mt-16 items-center">
         <div className="text-white space-y-4 flex flex-col items-center lg:items-start">
-          <h1 className="text-3xl md:text-5xl xl:text-7xl font-bold capitalize">{pokemon.name}</h1>
+          <h1 className="text-3xl md:text-5xl xl:text-7xl font-bold capitalize" translate="no">{pokemon.name}</h1>
           <div className="flex space-x-2">
             {pokemon.types.map((type: any, index: number) => (
               <span key={index} className="flex items-center rounded-xl font-semibold p-2" style={{ background: `${getTypeColor(type)}` }}>

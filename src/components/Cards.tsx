@@ -9,7 +9,7 @@ export default function Cards({ info }: any) {
                 <img className="w-56 lg:w-64 filter saturate-200" loading="lazy" src={info.image} alt={info.name} />
             </div>
             <div className="relative z-1 flex flex-col items-center mb-4 xl:mb-10 space-y-4">
-                <h3 className="text-2xl font-bold capitalize">{info.name}</h3>
+                <h3 className="text-2xl font-bold capitalize" translate="no">{info.name}</h3>
                 <div className="flex items-center gap-2 justify-center w-full">
                     {info.types.map((type: any, index: number) => (
                         <span key={index} className="rounded-xl font-semibold uppercase flex items-center gap-2 py-1 px-2" style={{ background: `${getTypeColor(info.types[index])}` }}>

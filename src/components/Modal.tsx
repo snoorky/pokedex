@@ -14,7 +14,7 @@ export default function PokemonModal({ toggleModal, pokemon }: PokemonModalProps
                     <img className="filter saturate-100 h-64" src={pokemon.image} alt={pokemon.name} />
                 </div>
                 <div className="relative flex flex-col text-white space-y-2 px-8 w-full items-center">
-                    <h4 className="capitalize font-bold text-2xl md:text-3xl">{pokemon.name}</h4>
+                    <h4 className="capitalize font-bold text-2xl md:text-3xl" translate="no">{pokemon.name}</h4>
                     <div className="absolute right-8">
                         <PokemonAudio src={pokemon.audio} />
                     </div>
