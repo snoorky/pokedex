@@ -19,7 +19,7 @@ export default function Hero() {
 
       const fetchDescription = await APIPokemon.get(`${species.url}`)
       const flavorDescription = fetchDescription.data
-      const description = flavorDescription.flavor_text_entries.find((entry: any) => entry.language.name === "pt")
+      const description = flavorDescription.flavor_text_entries.find((entry: any) => entry.language.name === "en")
 
       const statsData = stats.map((stat: any) => ({
         name: stat.stat.name, value: stat.base_stat,
